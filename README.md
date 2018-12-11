@@ -2,7 +2,7 @@
 Tetris for the Ti89 and Ti89 Titanium
 
 ## Compilation
-To compile (outputs executable named "tetris"):
+To compile using tigcc (outputs executable named "tetris"):
 ```
 make
 ```
