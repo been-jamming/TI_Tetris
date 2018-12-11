@@ -394,7 +394,9 @@ DEFINE_INT_HANDLER (update){
 }
 
 void _main(){
+	unsigned int old_delay;
 	clrscr();
+	old_delay = OSInitKeyInitDelay(0);
 
 	difficulty = 0;
 	difficulty_progress = 0;
@@ -422,5 +424,6 @@ void _main(){
 	}
 
 	SetIntVec(AUTO_INT_5, old_int_5);
+	OSInitKeyInitDelay(old_delay);
 }
 
