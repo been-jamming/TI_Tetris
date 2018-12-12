@@ -67,9 +67,6 @@ void initialize_pieces(){
 }
 
 void initialize_board(){
-	DrawLine(54, 0, 54, 100, A_NORMAL);
-	DrawLine(106, 0, 106, 100, A_NORMAL);
-
 	memset(global_board.squares, 0, sizeof(unsigned char)*200);
 
 	randomize();
@@ -248,11 +245,11 @@ void draw_board(){
 	unsigned char y;
 	
 	DrawLine(54, 0, 54, 100, A_NORMAL);
-	DrawLine(106, 0, 106, 100, A_NORMAL);
-	DrawLine(24, 74, 46, 74, A_NORMAL);
-	DrawLine(46, 74, 46, 96, A_NORMAL);
-	DrawLine(46, 96, 24, 96, A_NORMAL);
-	DrawLine(24, 96, 24, 74, A_NORMAL);
+	DrawLine(105, 0, 105, 100, A_NORMAL);
+	DrawLine(23, 73, 46, 73, A_NORMAL);
+	DrawLine(46, 73, 46, 96, A_NORMAL);
+	DrawLine(46, 96, 23, 96, A_NORMAL);
+	DrawLine(23, 96, 23, 73, A_NORMAL);
 
 	for(x = 0; x < 10; x++){
 		for(y = 0; y < 20; y++){
@@ -276,10 +273,10 @@ void draw_board(){
 
 void draw_game_over(){
 	SCR_RECT s;
-	s = (SCR_RECT) {55,36,105,60};
+	s = (SCR_RECT) {55,36,104,60};
 	ScrRectFill(&s, ScrRect, A_REVERSE);
-	DrawLine(55, 36, 105, 36, A_NORMAL);
-	DrawLine(55, 60, 105, 60, A_NORMAL);
+	DrawLine(55, 36, 104, 36, A_NORMAL);
+	DrawLine(55, 60, 104, 60, A_NORMAL);
 	FontSetSys(F_6x8);
 	DrawStr(68, 40, "Game", A_NORMAL);
 	DrawStr(65, 48, "Over!", A_NORMAL);
